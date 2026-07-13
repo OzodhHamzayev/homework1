@@ -1,19 +1,46 @@
 package main
 
-// import (
-// 	"fmt"
-// )
+import (
+	"fmt"
+)
 
 
 
+func BinarySearch(arr []int, x int) int {
+	high := len(arr)-1
+	low := 0
+	mid := (high+low)/2
+	for low <= high {
+		if x == arr[mid]{ 
+			return mid
+		} else if x > arr[mid] {
+			low = mid+1
+		} else if x < arr[mid] {
+			high = mid-1
+		}
+	} 
+	return -1
+}
 
-// func main( ) { 
 
 
+func main( ) { 
 
 
+//!binary search
+
+	numbers := []int{1,2,3,4,5,6,7,8,9}
+	num := 5
+
+	result := BinarySearch(numbers, num)
+	if result != -1 {
+		fmt.Println("number is found:", result)
+	} else {
+		fmt.Println("number not found")
+	}
 
 
+}
 
 
 
@@ -431,7 +458,7 @@ package main
 		// for i := 0; i < len(name1); i++ {
 		// 	fmt.Println(i)
 		// 	fmt.Println(name1[i])
-		// }
+		// } 
 
 
 		// for i := len(name1)-1; i > 0; i-- {

@@ -1,42 +1,42 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
+// import (
+// 	"fmt"
+// 	"strings"
+// )
 
-func main() {
+// func main() {
 	
-	//"Go is an open source programming language. 
-	// Golang makes it easy to build simple, reliable, and efficient software."
+// 	//"Go is an open source programming language. 
+// 	// Golang makes it easy to build simple, reliable, and efficient software."
 
-	text := "Go is it open it programming go it. Golang makes it easy to build simple, reliable, and efficient software."
+// 	text := "Go is it open it programming go it. Golang makes it easy to build simple, reliable, and efficient software."
 
-	resultUpperCase := strings.ToUpper(text)
-	fmt.Println("Upper Case : ",resultUpperCase)
+// 	resultUpperCase := strings.ToUpper(text)
+// 	fmt.Println("Upper Case : ",resultUpperCase)
 	
-	var count int = 1
-	for i := 1; i < len(text); i++ {
-		if text[i] == ' ' {
-			count++
-		}
-	}
-	fmt.Println("words: ", count)
+// 	var count int = 1
+// 	for i := 1; i < len(text); i++ {
+// 		if text[i] == ' ' {
+// 			count++
+// 		}
+// 	}
+// 	fmt.Println("words: ", count)
 
-	resultWords := strings.Split(text, " ")
-	fmt.Println("words ",len(resultWords))
+// 	resultWords := strings.Split(text, " ")
+// 	fmt.Println("words ",len(resultWords))
 
-	resultContains := strings.Contains(text, "go")
-	fmt.Println("Contains go :", resultContains)
+// 	resultContains := strings.Contains(text, "go")
+// 	fmt.Println("Contains go :", resultContains)
 
-	resultContainsJ := strings.Contains(text, "Java")
-	fmt.Println("Contains java :", resultContainsJ)
+// 	resultContainsJ := strings.Contains(text, "Java")
+// 	fmt.Println("Contains java :", resultContainsJ)
 
-	resultHasPrefix := strings.HasPrefix(text, "Go")
-	fmt.Println("started with go : ", resultHasPrefix)
+// 	resultHasPrefix := strings.HasPrefix(text, "Go")
+// 	fmt.Println("started with go : ", resultHasPrefix)
 
-	resultHasSuffix := strings.HasSuffix(text, "re.")
-	fmt.Println("ended with re. : ", resultHasSuffix)
+// 	resultHasSuffix := strings.HasSuffix(text, "re.")
+// 	fmt.Println("ended with re. : ", resultHasSuffix)
 
 	// var countedWords = []string{}
 	// var ExistedWords = []int{}
@@ -49,6 +49,6 @@ func main() {
 	// }
 
 
-}
+	// }
 
 	
