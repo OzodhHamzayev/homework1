@@ -10,7 +10,10 @@ func BinarySearch(arr []int, x int) int {
 	high := len(arr)-1
 	low := 0
 	mid := (high+low)/2
-	for low <= high {
+	if arr[high] < x || arr[low] >= x{
+		return -1
+	} else {
+		for low <= high {
 		if x == arr[mid]{ 
 			return mid
 		} else if x > arr[mid] {
@@ -20,6 +23,8 @@ func BinarySearch(arr []int, x int) int {
 		}
 	} 
 	return -1
+	}
+	
 }
 
 
@@ -30,7 +35,7 @@ func main( ) {
 //!binary search
 
 	numbers := []int{1,2,3,4,5,6,7,8,9}
-	num := 5
+	num := -50
 
 	result := BinarySearch(numbers, num)
 	if result != -1 {
