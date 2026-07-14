@@ -4,53 +4,157 @@ import (
 	"fmt"
 )
 
+//! binary search
+// func BinarySearch(arr []int, x int) int {
+// 	high := len(arr)-1
+// 	low := 0
+// 	mid := (high+low)/2
+// 	if arr[high] < x || arr[low] >= x{
+// 		return -1
+// 	} else {
+// 		for low <= high {
+// 		if x == arr[mid]{
+// 			return mid
+// 		} else if x > arr[mid] {
+// 			low = mid+1
+// 		} else if x < arr[mid] {
+// 			high = mid-1
+// 		}
+// 	}
+// 	return -1
+// 	}
+
+// }
 
 
-func BinarySearch(arr []int, x int) int {
-	high := len(arr)-1
-	low := 0
-	mid := (high+low)/2
-	if arr[high] < x || arr[low] >= x{
-		return -1
-	} else {
-		for low <= high {
-		if x == arr[mid]{ 
-			return mid
-		} else if x > arr[mid] {
-			low = mid+1
-		} else if x < arr[mid] {
-			high = mid-1
-		}
-	} 
-	return -1
-	}
-	
+
+
+
+
+
+
+
+
+
+
+
+
+func twoSum(nums []int, target int) []int {
+    result := []int{}
+    for i := 0; i < len(nums); i++ {
+        for k := i+1; k <= len(nums)-1; k++ { 
+            if nums[i]+nums[k] == target {
+                result = append(result, i,k)
+                return result
+            }
+        }
+    }
+    return result
 }
+func longestCommonPrefix(strs []string) string {
+	for i := 0; i < len(strs)-1; i++ {
+		for k := 0; k < len(strs[i]); k++ {
+			if string(strs[i][k]) == string(strs[i+1][k]) {
+				fmt.Println("Aa")
+			}
+		}
+	}
+	return "dad"
+}
+
+
+
+
+
+
+
 
 
 
 func main( ) { 
-	// Task1()
+
+
+	// Task1() 
 	// Task2()
 	// Task3()
 	// Task4()
-	// Task5()
+	// Task5()		
 
 
-//!binary search
 
-	numbers := []int{1,2,3,4,5,6,7,8,9}
-	num := -50
+    strs := []string{"flower","flow","flight"}
+	longestCommonPrefix(strs)
 
-	result := BinarySearch(numbers, num)
-	if result != -1 {
-		fmt.Println("number is found:", result)
-	} else {
-		fmt.Println("number not found")
-	}
+
+	// numbers := []int{3,2,4}
+	// target := 6
+	// result := twoSum(numbers, target)
+	// fmt.Println(result)
+
+
+
+br
+
+
+
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// b := 1
+// v := 3
+// result1 := []int{}
+// result1 = append(result1, b,v)
+// fmt.Println(result1)
+// //!binary search
+
+// 	numbers := []int{1,2,3,4,5,6,7,8,9}
+// 	num := -50
+
+// 	result := BinarySearch(numbers, num)
+// 	if result != -1 {
+// 		fmt.Println("number is found:", result)
+// 	} else {
+// 		fmt.Println("number not found")
+// 	}
+
+
+// }
 
 
 
@@ -247,7 +351,7 @@ func main( ) {
 
 	//!2-2
 	
-	// nums3 := []int{11,23,34,41,15,16,75,58,19} 
+	// nums3 := []int{11,23,34,41,,115,16,75,589} 
 	// newNum3 := 3333
 	// insertIndex := 3
 	// nums3 = append(nums3, 0)
