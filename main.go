@@ -27,6 +27,33 @@ import (
 // }
 
 
+func plusOne(digits []int) []int {
+    for i := len(digits)-1; i >= 0; i-- {
+		if digits[i] < 9 {
+			digits[i] += 1
+			break
+		} else if digits[i] == 9 {
+			digits[i] = 0
+			if digits[0] ==0 {
+				digits[0] = 1
+				digits = append(digits, 0)
+			}
+		}
+	}
+	return digits
+}
+
+
+func main( ) { 
+
+	digits := []int{9,9}
+	plusOne := plusOne(digits)
+	fmt.Println(plusOne)
+
+
+
+}
+
 //! twoSum
 // func twoSum(nums []int, target int) []int {
 //     result := []int{}
@@ -42,39 +69,35 @@ import (
 // }
 
 
-//!Remove Duplicates
-func removeDuplicates(nums []int) []int {
-	nums = append(nums, 0)
-	k := 0
-	uniqueElements := []int{}
-	newElements := []int{}
-	for i := 0; i < len(nums)-1; i++ {
-		if nums[i] == nums[i+1] {
-			newElements = append(newElements, nums[i])
-		}else if nums[i] != nums[i+1] {
-			k++
-			uniqueElements = append(uniqueElements, nums[i])
-		}
+// //!Remove Duplicates
+// func removeDuplicates(nums []int) []int {
+// 	nums = append(nums, 0)
+// 	k := 0
+// 	uniqueElements := []int{}
+// 	newElements := []int{}
+// 	for i := 0; i < len(nums)-1; i++ {
+// 		if nums[i] == nums[i+1] {
+// 			newElements = append(newElements, nums[i])
+// 		}else if nums[i] != nums[i+1] {
+// 			k++
+// 			uniqueElements = append(uniqueElements, nums[i])
+// 		}
 
-	}
-	fmt.Println(newElements)
-	for i := 0; i < len(newElements)-1; i++ {
-			uniqueElements = append(uniqueElements, newElements[i])
-	}
-
-
-	return uniqueElements
-}
+// 	}
+// 	fmt.Println(newElements)
+// 	for i := 0; i < len(newElements)-1; i++ {
+// 			uniqueElements = append(uniqueElements, newElements[i])
+// 	}
 
 
+// 	return uniqueElements
+// }
 
 
-func main( ) { 
 
-		numbers := []int{0,0,1,1,1,2,2,3,3,4}
-		result := removeDuplicates(numbers)
-		fmt.Println(result)
 
+
+	
 
 
 
@@ -96,13 +119,19 @@ func main( ) {
 
 
 
+
+	// numbers := []int{0,0,1,1,1,2,2,3,3,4}
+		// result := removeDuplicates(numbers)
+		// fmt.Println(result)
+
+
 	// numbers := []int{3,2,4}
 	// target := 6
 	// result := twoSum(numbers, target)
 	// fmt.Println(result)
 
 
-}
+
 
 
 
