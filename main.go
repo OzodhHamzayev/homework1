@@ -27,51 +27,65 @@ import (
 // }
 
 
+//! twoSum
+// func twoSum(nums []int, target int) []int {
+//     result := []int{}
+//     for i := 0; i < len(nums); i++ {
+//         for k := i+1; k <= len(nums)-1; k++ { 
+//             if nums[i]+nums[k] == target {
+//                 result = append(result, i,k)
+//                 return result
+//             }
+//         }
+//     }
+//     return result
+// }
 
 
-
-
-
-
-
-
-
-
-
-
-func twoSum(nums []int, target int) []int {
-    result := []int{}
-    for i := 0; i < len(nums); i++ {
-        for k := i+1; k <= len(nums)-1; k++ { 
-            if nums[i]+nums[k] == target {
-                result = append(result, i,k)
-                return result
-            }
-        }
-    }
-    return result
-}
-func longestCommonPrefix(strs []string) string {
-	for i := 0; i < len(strs)-1; i++ {
-		for k := 0; k < len(strs[i]); k++ {
-			if string(strs[i][k]) == string(strs[i+1][k]) {
-				fmt.Println("Aa")
-			}
+//!Remove Duplicates
+func removeDuplicates(nums []int) []int {
+	nums = append(nums, 0)
+	k := 0
+	uniqueElements := []int{}
+	newElements := []int{}
+	for i := 0; i < len(nums)-1; i++ {
+		if nums[i] == nums[i+1] {
+			newElements = append(newElements, nums[i])
+		}else if nums[i] != nums[i+1] {
+			k++
+			uniqueElements = append(uniqueElements, nums[i])
 		}
+
 	}
-	return "dad"
+	fmt.Println(newElements)
+	for i := 0; i < len(newElements)-1; i++ {
+			uniqueElements = append(uniqueElements, newElements[i])
+	}
+
+
+	return uniqueElements
 }
-
-
-
-
-
-
 
 
 
 
 func main( ) { 
+
+		numbers := []int{0,0,1,1,1,2,2,3,3,4}
+		result := removeDuplicates(numbers)
+		fmt.Println(result)
+
+
+
+
+
+
+
+
+  
+
+
+
 
 
 	// Task1() 
@@ -82,21 +96,10 @@ func main( ) {
 
 
 
-    strs := []string{"flower","flow","flight"}
-	longestCommonPrefix(strs)
-
-
 	// numbers := []int{3,2,4}
 	// target := 6
 	// result := twoSum(numbers, target)
 	// fmt.Println(result)
-
-
-
-br
-
-
-
 
 
 }
