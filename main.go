@@ -67,7 +67,7 @@ func InsertElements(nums []int, target int) []int {
 	nums = append(nums, 0)
 	r := 0
 	for i := 0; i < len(nums)-1; i++ {
-		if nums[i] <= target && nums[i+1] > target{
+		if nums[i] >= target {
 			r = i+1
 			for k := len(nums)-1; k > i; k-- {
 				nums[k]=nums[k-1]
@@ -85,7 +85,7 @@ func InsertElements(nums []int, target int) []int {
 func main() { 
 
 	nums := []int{1,2,3,4,5,6,7,8,9,10}
-	target := 4
+	target := 10
 	InsertElements := InsertElements(nums, target)
 	fmt.Println(InsertElements)
 
