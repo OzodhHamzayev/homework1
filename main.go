@@ -85,7 +85,7 @@ func InsertElements(nums []int, target int) []int {
 
 func main() { 
 
-	nums := []int{1,2,3,4,5,6,7,8,9}
+	nums := []int{1,2,3,4,5,6,7,8,9,10}
 	target := 8
 	InsertElements := InsertElements(nums, target)
 	fmt.Println(InsertElements)
