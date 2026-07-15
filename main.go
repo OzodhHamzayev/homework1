@@ -62,21 +62,33 @@ func singleNumber(nums []int) int {
 
 
 
-
-
-
+//! insert Elements
+func InsertElements(nums []int, target int) []int { 
+	nums = append(nums, 0)
+	r := 0
+	for i := 0; i < len(nums)-1; i++ {
+		if nums[i] <= target && nums[i+1] > target{
+			r = nums[i+1]
+			fmt.Println(r)
+			for k := len(nums)-1; k >= i+1; k-- {
+				nums[k]=nums[k-1]
+				if r == nums[k] {
+					target = k
+				}
+			}
+				break
+		}
+	}
+	return nums
+}
 
 
 func main() { 
-	nums := []int{1,2,3,4,5,6}
-	target := 6
-	searchInsert := searchInsert(nums,target)
-	if searchInsert == -1 {
-		fmt.Println("number not found")
-	}else {
-		fmt.Println(nums[searchInsert])
-		fmt.Println(searchInsert)
-	}
+
+	nums := []int{1,2,3,4,5,6,7,8,9}
+	target := 8
+	InsertElements := InsertElements(nums, target)
+	fmt.Println(InsertElements)
 
 
 }
@@ -119,7 +131,15 @@ func main() {
 
 
 
-
+	// nums := []int{1,2,3,4,5,6}
+	// target := 6
+	// searchInsert := searchInsert(nums,target)
+	// if searchInsert == -1 {
+	// 	fmt.Println("number not found")
+	// }else {
+	// 	fmt.Println(nums[searchInsert])
+	// 	fmt.Println(searchInsert)
+	// }
 
 
 
