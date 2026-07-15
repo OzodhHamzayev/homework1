@@ -65,19 +65,24 @@ func singleNumber(nums []int) int {
 //! insert Elements
 func InsertElements(nums []int, target int) []int { 
 	nums = append(nums, 0)
-	r := 0
+	r := len(nums)-1
 	for i := 0; i < len(nums)-1; i++ {
 		if nums[i] >= target {
-			r = i+1
-			for k := len(nums)-1; k > i; k-- {
+			if nums[i] != target {
+				r = i
+			}else {
+				r= i+1
+			}
+			for k := len(nums)-1; k >= r; k-- {
 				nums[k]=nums[k-1]
 				if r == k {
-					target = nums[k]
+					nums[k] = target 
 				}
 			}
 				break
 		}
 	}
+	nums[r] = target
 	return nums
 }
 
@@ -85,7 +90,7 @@ func InsertElements(nums []int, target int) []int {
 func main() { 
 
 	nums := []int{1,2,3,4,5,6,7,8,9,10}
-	target := 10
+	target := 14
 	InsertElements := InsertElements(nums, target)
 	fmt.Println(InsertElements)
 
