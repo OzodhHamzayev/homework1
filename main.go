@@ -21,7 +21,7 @@ func searchInsert(nums []int, target int) int {
 	return low
 }
 
-
+ 
 
 
 
@@ -87,12 +87,194 @@ func InsertElements(nums []int, target int) []int {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	func searchRange(nums []int, target int) []int {
+		high, low :=  len(nums)-1, 0
+		result := []int{}
+		for (low<=high) {
+			mid := (high+low)/2
+			if nums[mid] == target {
+					result = append(result, mid)
+					low = mid-2
+			} else if nums[mid] > target {
+				high = mid-1
+			} else if (nums[mid] < target) {
+				low = mid+1
+			}
+		}
+		return result
+	}
+
+
+
+
+func removeDuplicates(nums []int) []int {
+	nums = append(nums, 0)
+	k := 0
+	uniqueElements := []int{}
+	newElements := []int{}
+	for i := 0; i < len(nums)-1; i++ {
+		if nums[i] == nums[i+1] {
+			newElements = append(newElements, nums[i])
+		}else if nums[i] != nums[i+1] {
+			k++
+			uniqueElements = append(uniqueElements, nums[i])
+		}
+
+	}
+	fmt.Println(newElements)
+	for i := 0; i < len(newElements)-1; i++ {
+			uniqueElements = append(uniqueElements, newElements[i])
+	}
+
+
+	return uniqueElements
+
+
+}
+
+
+
+func twoSumm(nums []int, target int) []int {
+    result := []int{}
+    for i := 0; i < len(nums)-1; i++ {
+            if nums[i]+nums[i+1] == target {
+                result = append(result, i,i+1)
+                return result
+            }
+    }
+    return result
+}
+
 func main() { 
 
-	nums := []int{1,2,3,4,5,6,7,8,9,10}
-	target := 14
-	InsertElements := InsertElements(nums, target)
-	fmt.Println(InsertElements)
+	nums := []int{2,2,1}
+	target := 4
+	fmt.Println(twoSumm(nums, target))
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// nums := []int{5,7,7,8,8,10}
+	// target := 8
+	// searchRange := searchRange(nums, target)
+	// fmt.Println(searchRange)
+
+
+
+
+	// nums := []int{1,3,4,5,6,7,8,9,10}
+	// target := 2
+	// InsertElements := InsertElements(nums, target)
+	// fmt.Println(InsertElements)
 
 
 }
