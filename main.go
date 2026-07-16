@@ -955,7 +955,7 @@ func main() {
 // 		}
 
 // 		for _, v := range full {
-// 			fmt.Println(v)
+// 			afmt.Println(v)
 
 // 		}
 // 	}
