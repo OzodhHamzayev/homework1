@@ -21,12 +21,6 @@ func searchInsert(nums []int, target int) int {
 	return low
 }
 
- 
-
-
-
-
-
 
 
 //!single Number -> not fulll
@@ -85,59 +79,6 @@ func InsertElements(nums []int, target int) []int {
 	nums[r] = target
 	return nums
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -208,61 +149,6 @@ func main() {
 	
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	// nums := []int{5,7,7,8,8,10}
 	// target := 8
 	// searchRange := searchRange(nums, target)
@@ -281,42 +167,6 @@ func main() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	// nums := []int{1,2,3,4,5,6}
 	// target := 6
 	// searchInsert := searchInsert(nums,target)
@@ -326,9 +176,6 @@ func main() {
 	// 	fmt.Println(nums[searchInsert])
 	// 	fmt.Println(searchInsert)
 	// }
-
-
-
 
 
 
@@ -499,11 +346,6 @@ func main() {
 // 	fmt.Println(numbers)
 
 
-
-
-
-
-
 // 	!majority elements
 // 	equalNumbers := []int{1,1,1,1,2,2,3,3,4,4,4}
 
@@ -554,11 +396,6 @@ func main() {
 
 
 
-
-
-
-
-
 // !majority elements 3
 
 // 	differentNumber := []int{0,1,2,2,3,4,5,6,6,7,7,8,9,10,10}
@@ -580,18 +417,6 @@ func main() {
 // 		}
 // 	}
 // 	fmt.Println(newArray)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -622,10 +447,6 @@ func main() {
 // 	length := len(endingNumber)
 // 	endingNumber = endingNumber[:length-1]
 // 	fmt.Println(endingNumber)
-
-
-
-
 
 
 
@@ -690,11 +511,6 @@ func main() {
 
 
 
-
-
-
-
-
 // 			!traversal
 // 		traversal := []int{1,2,3,4,5,6,7,8,9}
 
@@ -724,8 +540,6 @@ func main() {
 // 	fmt.Println(smallerElement)
 
 
-
-
 // 	!Reverse the elements of an array
 
 // 	sortedElements := []int{1,2,3,4,5,6,7}
@@ -734,8 +548,6 @@ func main() {
 // 		reverseElements = append(reverseElements, sortedElements[i])
 // 	}
 // 	fmt.Println(reverseElements)
-
-
 
 
 
@@ -795,8 +607,6 @@ func main() {
 // 		}
 
 
-
-
 // 		!two-dimensional
 
 // 		matrix := [2][3]int{
@@ -815,7 +625,6 @@ func main() {
 // 		fmt.Println(*a)
 
 
-
 // 		!deletion
 
 // 		outdatedCars := [6]string{"BMW", "CHevrolet", "Mazda", "Mustang", "KIA", "Ferrari"}
@@ -829,7 +638,6 @@ func main() {
 // 			}
 // 		}
 		
-
 
 // 			fmt.Println("new car:", removeCars)
 
