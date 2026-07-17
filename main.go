@@ -142,10 +142,11 @@ func twoSumm(nums []int, target int) []int {
 }
 
 
+// func main() { 
 
-	nums := []int{2,2,1}
-	target := 4
-		fmt.Println(twoSumm(nums, target))
+	// nums := []int{2,2,1}
+	// target := 4
+	// 	fmt.Println(twoSumm(nums, target))
 	
 
 
@@ -163,7 +164,7 @@ func twoSumm(nums []int, target int) []int {
 	// fmt.Println(InsertElements)
 
 
-}
+// }
 
 
 
