@@ -12,7 +12,7 @@ func searchRange(nums []int, target int) []int {
 		if nums[i] == target {
 			if result[0] == -1 {
 				result[0] = i
-			}else{
+			}else{	
 				result[1] = i
 			}
 		}
@@ -22,12 +22,36 @@ func searchRange(nums []int, target int) []int {
 }
 
 
+func searchRange2(nums []int, target int) []int {
+	low, high := 0,len(nums)-1
+	result := []int{-1,-1}
+	for (low <= high) {
+		mid := (low+high)/2
+		if nums[mid] == target  {
+			high = mid-1
+			if result[0] == -1 {
+				result[0] = mid		
+			}else {
+				result[1] = mid
+			}
+			fmt.Println(result)
+		} else if nums[mid] < target {
+			low = mid+1
+		} else if nums[mid] > target { 
+			high = mid-1
+		}
+	}
+	return result
+}
+
 
 func main(){
-	nums := []int{5,7,7,8,8,10}
+	nums := []int{5,7,7,8,8,8,10}
 	target := 8
 	searchRange := searchRange(nums, target)
+	searchRange2 := searchRange2(nums, target)
 	fmt.Println(searchRange)
+	fmt.Println(searchRange2)
 }
 
 
